@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -40,7 +41,11 @@ class HomeView extends StatelessWidget {
                     ],
                   ),
                   Spacer(),
-                  Icon(Icons.menu, size: 30),
+                  ElevatedButton(onPressed: (){
+Get.toNamed('/menu');
+                  }, child: 
+                 Icon(Icons.menu, size: 30), )
+                  
                 ],
               ),
 
@@ -146,6 +151,11 @@ class HomeView extends StatelessWidget {
 
       /// ---- Bottom Navigation ----
       bottomNavigationBar: BottomNavigationBar(
+          onTap: (index) {
+    if (index == 4) {                     // Message icon tapped
+      Get.toNamed('/message');          // Go to message screen
+    }
+  },
         type: BottomNavigationBarType.fixed,
         currentIndex: 0,
         selectedItemColor: Colors.black,
@@ -160,7 +170,7 @@ class HomeView extends StatelessWidget {
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite_border), label: ""),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline), label: ""),
+              icon: Icon(Icons.message), label: ""),
         ],
       ),
     );
