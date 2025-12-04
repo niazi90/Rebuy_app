@@ -48,19 +48,19 @@ class MenuView extends StatelessWidget {
                 icon: Icons.inventory_2_outlined,
                 title: "My Orders",
                 subtitle: "View all your orders",
-                onTap: () => controller.goTo("orders"),
+                onTap: () => controller.goTo("order_view"),
               ),
               _menuCard(
                 icon: Icons.list_alt_outlined,
                 title: "My Listings",
                 subtitle: "View your product listing for sale",
-                onTap: () => controller.goTo("listings"),
+                onTap: () => controller.goTo("listing_view"),
               ),
               _menuCard(
                 icon: Icons.favorite_border,
                 title: "Liked Items",
                 subtitle: "See the products you have wishlisted",
-                onTap: () => controller.goTo("liked"),
+                onTap: () => controller.goTo("like_page"),
               ),
 
               Spacer(),

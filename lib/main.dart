@@ -4,10 +4,15 @@ import 'package:get/get.dart';
 
 import 'package:rebuy/views/auth_view/login_view.dart';
 import 'package:rebuy/views/auth_view/signup_view.dart';
+import 'package:rebuy/views/explore_view.dart/explore_view.dart';
 import 'package:rebuy/views/home_view/home_view.dart';
+import 'package:rebuy/views/like_page/liked_view.dart';
+import 'package:rebuy/views/listing_view/listing_view.dart';
 import 'package:rebuy/views/menu_view/menu_view.dart';
 import 'package:rebuy/views/message_view/message_view.dart';
 import 'package:rebuy/views/my_account_view/my_account_view.dart';
+import 'package:rebuy/views/my_order_view/my_order_View.dart';
+import 'package:rebuy/views/product_view_detail/product_view_detail.dart';
 import 'package:rebuy/views/splish_view/splish_view.dart';
 
 void main() {
@@ -39,7 +44,12 @@ class MyApp extends StatelessWidget {
         /// Menu & My Account Routes
         GetPage(name: '/menu', page: () => MenuView()),
         GetPage(name: '/message', page: () => MessagesView()),
+        GetPage(name: '/explore', page: () => ExploreScreen()),
         GetPage(name: '/my-account', page: () => MyAccountView()),
+        GetPage(name: '/product_details', page: () => ProductDetailsPage()),
+        GetPage(name: '/like_page', page: () => LikedItemsPage()),
+        GetPage(name: '/order_view', page: () => MyOrderView()),
+        GetPage(name: '/listing_view', page: () => ListingView()),
       ],
     );
   }

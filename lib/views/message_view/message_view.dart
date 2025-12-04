@@ -12,7 +12,29 @@ class MessagesView extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F5),
-
+  bottomNavigationBar: BottomNavigationBar(
+          onTap: (index) {
+    if (index == 4) {                     // Message icon tapped
+      Get.toNamed('/message');          // Go to message screen
+    }
+  },
+        type: BottomNavigationBarType.fixed,
+        currentIndex: 4,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_filled), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.link), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.camera_alt), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite_border), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.message), label: ""),
+        ],
+      ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -78,7 +100,7 @@ class MessagesView extends StatelessWidget {
                   title: "DJI Mavic Mini 2",
                   message: "You: Does it come with an additional battery?",
                   time: "9:03 AM",
-                  avatar: "https://i.pravatar.cc/100?img=10",
+                  avatar: "assets/images/Ellipse13.png",
                   online: true,
                 ),
 
@@ -87,7 +109,7 @@ class MessagesView extends StatelessWidget {
                   title: "DJI Mavic Mini 2",
                   message: "Petey: Sorry, I’m unlisting it",
                   time: "Yesterday 4:12 PM",
-                  avatar: "https://i.pravatar.cc/100?img=20",
+                  avatar: "assets/images/Ellipse15.png",
                   online: true,
                 ),
 
@@ -96,7 +118,7 @@ class MessagesView extends StatelessWidget {
                   title: "DJI Mavic Air 2",
                   message: "Anna: I think you should go with Mavic Mini",
                   time: "15 Feb 21, 9:30 PM",
-                  avatar: "https://i.pravatar.cc/100?img=30",
+                  avatar: "assets/images/Ellipse17.png",
                   online: true,
                 ),
 
@@ -105,7 +127,7 @@ class MessagesView extends StatelessWidget {
                   title: "Apple AirPods Pro",
                   message: "Bob: You’re welcome",
                   time: "25 Jan 21, 10:30 AM",
-                  avatar: "https://i.pravatar.cc/100?img=40",
+                  avatar: "assets/images/Ellipse19.png",
                 ),
 
                 MessageTile(
@@ -113,7 +135,7 @@ class MessagesView extends StatelessWidget {
                   title: "JBL Charge 2",
                   message: "Greta: Alright",
                   time: "20 Dec 20, 9:23 AM",
-                  avatar: "https://i.pravatar.cc/100?img=50",
+                  avatar: "assets/images/Ellipse21.png",
                   online: true,
                   badge: 1,
                 ),
@@ -236,6 +258,12 @@ class MessageTile extends StatelessWidget {
                     ),
                   ),
                 ),
+
+
+
+
+
+                
             ],
           ),
         ],

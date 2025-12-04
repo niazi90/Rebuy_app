@@ -8,16 +8,16 @@ class MenuControllerX extends GetxController {
         Get.toNamed('/my-account');   // My Account page
         break;
 
-      case "orders":
-        Get.toNamed('/orders');       // Orders page (if you create it)
+      case "order_view":
+        Get.toNamed('/order_view');       // Orders page (if you create it)
         break;
 
-      case "listings":
-        Get.toNamed('/listings');     // My Listings page
+      case "listing_view":
+        Get.toNamed('/listing_view');     // My Listings page
         break;
 
-      case "liked":
-        Get.toNamed('/liked-items');  // Liked items page
+      case "like_page":
+        Get.toNamed('/like_page');  // Liked items page
         break;
 
       default:
