@@ -9,6 +9,8 @@ class ExploreScreen extends StatelessWidget {
   final ExploreController controller = Get.put(ExploreController());
   final BottomNavController bottomNav = Get.put(BottomNavController());
 
+   ExploreScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

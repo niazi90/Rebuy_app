@@ -1,5 +1,4 @@
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import 'package:rebuy/views/auth_view/login_view.dart';
@@ -11,19 +10,14 @@ import 'package:rebuy/views/listing_view/listing_view.dart';
 import 'package:rebuy/views/menu_view/menu_view.dart';
 import 'package:rebuy/views/message_view/message_view.dart';
 import 'package:rebuy/views/my_account_view/my_account_view.dart';
-import 'package:rebuy/views/my_order_view/my_order_View.dart';
+import 'package:rebuy/views/my_order_view/my_orderview.dart';
 import 'package:rebuy/views/product_view_detail/product_view_detail.dart';
 import 'package:rebuy/views/splish_view/splish_view.dart';
 
-void main() {
-  runApp(
-    DevicePreview(
-           // optional, you can set true if needed
-      builder: (context) => const MyApp(),
-    ),
-  );
+import 'controller/splish_controller/splish_controller.dart';
+void main(){
+  runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -33,15 +27,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/splish',
       useInheritedMediaQuery: true,
-      builder: DevicePreview.appBuilder,
-      
       getPages: [
-        GetPage(name: '/splish', page: () => SplishView()),
+        GetPage(
+          name: '/splish',
+          page: () => SplishView(),
+          binding: BindingsBuilder(() {
+            Get.put(SplishController());
+          }),
+        ),
         GetPage(name: '/login', page: () => LoginView()),
         GetPage(name: '/signup', page: () => SignupView()),
         GetPage(name: '/home', page: () => HomeView()),
-
-        /// Menu & My Account Routes
         GetPage(name: '/menu', page: () => MenuView()),
         GetPage(name: '/message', page: () => MessagesView()),
         GetPage(name: '/explore', page: () => ExploreScreen()),

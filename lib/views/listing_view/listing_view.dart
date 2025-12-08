@@ -7,6 +7,8 @@ class ListingView extends StatelessWidget {
   final controller = Get.put(ListingController());
   final bottomNav = Get.find<BottomNavController>();
 
+   ListingView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

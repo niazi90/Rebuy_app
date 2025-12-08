@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rebuy/controller/bottom_nav_controller/bottom_nav_controller.dart';
-import 'package:rebuy/controller/liked_controller/Liked_controler.dart';
+import 'package:rebuy/controller/liked_controller/liked_controler.dart';
 
+// ignore: use_key_in_widget_constructors
 class LikedItemsPage extends StatelessWidget {
   final controller = Get.put(LikedItemsController());
   final bottomNav = Get.find<BottomNavController>();

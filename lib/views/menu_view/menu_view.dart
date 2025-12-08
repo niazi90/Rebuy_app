@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rebuy/controller/menu/menu_controller.dart';
 
+// ignore: use_key_in_widget_constructors
 class MenuView extends StatelessWidget {
   final controller = Get.put(MenuControllerX());
 

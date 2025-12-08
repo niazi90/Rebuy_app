@@ -1,8 +1,10 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rebuy/controller/bottom_nav_controller/bottom_nav_controller.dart';
 import 'package:rebuy/controller/order_controller/order_controler.dart';
 
+// ignore: use_key_in_widget_constructors
 class MyOrderView extends StatelessWidget {
   final controller = Get.put(OrderControler());
   final bottomNav = Get.find<BottomNavController>();

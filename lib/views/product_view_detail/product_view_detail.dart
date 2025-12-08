@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:rebuy/controller/product_controller/product_controller.dart';
 
 
+// ignore: use_key_in_widget_constructors
 class ProductDetailsPage extends StatelessWidget {
   final controller = Get.put(ProductController());
 

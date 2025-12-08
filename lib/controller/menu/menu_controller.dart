@@ -21,7 +21,6 @@ class MenuControllerX extends GetxController {
         break;
 
       default:
-        print("Unknown page: $page");
     }
   }
 
